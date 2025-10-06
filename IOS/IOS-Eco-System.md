@@ -67,7 +67,10 @@ All certificates must be renewed periodically, typically every 1–3 years, to m
 
     - Devices (for development or Ad-Hoc distribution)
 
-
+    - Once a profile is created, it locks in all these details.
+    - Any change to the app’s identity, capabilities, or signing info →  you need to generate a new provisioning profile.
+    - Old profiles don’t automatically update; they are fixed snapshots at creation. So if you add something like push notification capibilities,
+      profile will become invalid. and you need to refresh / update it. 
 
 
 ### 2. How They Connect
@@ -269,6 +272,10 @@ Choose "Saved to disk".
 
 - Provisioning profiles, not certificates, are app-specific
 
+- iOS provisioning profiles are snapshots of your app’s capabilities and certificates at the time they are created.
+
+- #### If you add or change capabilities (like push notifications, App Groups, or iCloud), the existing profile does not automatically update.
+  #### In that case, the profile becomes invalid for the new capabilities and you need to regenerate or refresh the profile in Apple Developer Portal.After regenerating, you need to download and install the updated profile in Xcode.
 
 ## Renewal
 
