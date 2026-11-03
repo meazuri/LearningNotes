@@ -4,7 +4,7 @@
 
 ---
 
-## 1. CIDR Basics (Simple Version)
+## 1. CIDR Basics (Simple Version) Classless Inter-Domain Routing.
 
 ### What is CIDR?
 
